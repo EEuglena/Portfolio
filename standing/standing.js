@@ -20,13 +20,11 @@ const drawStandingWave = (n) => {
 	const t = Date.now();
 	const ctx = canvas.getContext("2d");
 	ctx.strokeStyle = "white";
-	ctx.clearRect(0, 0, 600, 600);
+	ctx.clearRect(0, 0, 400, 400);
 
 	const pointer = [
 		CENTER[0],
-		CENTER[1] -
-			RADIUS -
-			AMPLITUDE * Math.sin(-(n * Math.PI) / 2 + t / PERIOD),
+		CENTER[1] - RADIUS - AMPLITUDE * Math.sin(-Math.PI / 2 + t / PERIOD),
 	];
 
 	if (drawPointer) {
@@ -40,23 +38,22 @@ const drawStandingWave = (n) => {
 	if (drawLine) {
 		ctx.beginPath();
 		ctx.moveTo(0, pointer[1]);
-		ctx.lineTo(600, pointer[1]);
+		ctx.lineTo(400, pointer[1]);
 		ctx.closePath();
 		ctx.stroke();
 	}
 
 	for (let m = 0; m < n; m++) {
-		const pointer = [
-			CENTER[0],
-			CENTER[1] -
-				RADIUS -
-				AMPLITUDE *
-					Math.sin(
-						-(n * Math.PI) / 2 + t / PERIOD + (2 * m * Math.PI) / n
-					),
-		];
-
 		if (drawPointers) {
+			const pointer = [
+				CENTER[0],
+				CENTER[1] -
+					RADIUS -
+					AMPLITUDE *
+						Math.sin(
+							-Math.PI / 2 + t / PERIOD + (2 * m * Math.PI) / n
+						),
+			];
 			ctx.beginPath();
 			ctx.arc(pointer[0], pointer[1], 5, 0, Math.PI * 2, true);
 			ctx.closePath();

@@ -1,0 +1,38 @@
+body {
+	user-select: none;
+	overflow: hidden;
+}
+
+.background {
+	font-family: "Times New Roman";
+	font-size: 24px;
+	color: rgba(0, 0, 0, 0.2);
+	line-break: anywhere;
+}
+
+.original,
+.mask {
+	position: fixed;
+	padding: 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 400px;
+	font-family: "Times New Roman";
+	font-size: 32px;
+	background-color: white;
+	border: 5px solid rgb(43, 6, 6);
+}
+
+.mask {
+	cursor: none;
+	mask: url(circle.svg);
+	-webkit-mask: url(circle.svg) 37px 45px;
+	mask-size: initial;
+	-webkit-mask-size: 50px;
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
+	background-color: red;
+	color: white;
+}

@@ -13,11 +13,17 @@ let positions = [
 let blank = [2, 2];
 
 const setTiles = () => {
-	for (let i = 0; i < 8; i++) {
-		tiles[i].style.transform = `translate(${positions[i][0] * UNIT}px, ${
-			positions[i][1] * UNIT
-		}px)`;
-	}
+	// for (let i = 0; i < 8; i++) {
+	// 	tiles[i].style.transform = `translate(${positions[i][0] * UNIT}px, ${
+	// 		positions[i][1] * UNIT
+	// 	}px)`;
+	// }
+	tiles.forEach(
+		(tile, i) =>
+			(tile.style.transform = `translate(${positions[i][0] * UNIT}px, ${
+				positions[i][1] * UNIT
+			}px)`)
+	);
 };
 
 const moveTile = (number) => {

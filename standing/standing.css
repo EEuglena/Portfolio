@@ -21,6 +21,7 @@ div {
 	font-size: 60px;
 	font-family: "Noto Sans";
 	font-weight: 100;
+	cursor: pointer;
 }
 
 .plus {
