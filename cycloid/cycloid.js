@@ -30,7 +30,7 @@ const drawCanvas = () => {
 		center[1] + LENGTH * Math.sin(theta),
 	];
 
-	if (theta > (3 / 2) * Math.PI) return false;
+	if (theta >= (3 / 2) * Math.PI) return false;
 
 	points.push(point);
 
@@ -117,7 +117,6 @@ const handleCanvasMouseDown = (event) => {
 		0.5;
 	if (distance <= 6) {
 		isClicking = true;
-		console.log("Clicked");
 	}
 };
 

@@ -16,6 +16,7 @@ div {
 }
 
 .play {
+	cursor: pointer;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -30,6 +31,7 @@ div {
 }
 
 .stop {
+	cursor: pointer;
 	position: fixed;
 	top: 50%;
 	left: 50%;

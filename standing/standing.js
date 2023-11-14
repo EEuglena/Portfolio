@@ -6,8 +6,8 @@ const lineDiv = document.querySelector(".line");
 const pointersDiv = document.querySelector(".pointers");
 
 const CENTER = [200, 200];
-const RADIUS = 100;
-const AMPLITUDE = 30;
+const RADIUS = 40;
+const AMPLITUDE = 120;
 const PERIOD = 500;
 
 let drawer;
